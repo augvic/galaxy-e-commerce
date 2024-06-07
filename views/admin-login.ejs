@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/admin-login.css">
+    <link rel="icon" href="/images/favicon.ico">
+    <script src="/scripts/admin-login.js" defer></script>
+    <title>f2 Login</title>
+</head>
+<body>
+    <div class="content">
+        <% if (account_create_sucess) { %>
+            <div id="account-create-sucess" class="account-create-sucess">
+                <p><%= account_create_sucess %></p>
+            </div>
+        <% } %>
+        <% if (account_create_failed) { %>
+            <div id="account-create-failed" class="account-create-failed">
+                <p><%= account_create_failed %></p>
+            </div>
+        <% } %>
+        <% if (account_login) { %>
+            <div id="account-login" class="account-create-failed">
+                <p><%= account_login %></p>
+            </div>
+        <% } %>
+        <% if (loginFirst) { %>
+            <div id="loginFirst" class="account-create-failed">
+                <p><%= loginFirst %></p>
+            </div>
+        <% } %>
+        <div id="all-forms">
+            <form action="/admin/login-send" method="post" id="login-form">
+                <input name="username-login" class="input" type="text" required="true" id="username" placeholder="Username">
+                <br>
+                <div class="password-container">
+                    <input name="password-login" class="input" type="password" required="true" id="password" placeholder="Password">
+                    <span id="togglePassword">🔒</span>
+                </div>
+                <br>
+                <div>
+                    <input name="remember-me" type="checkbox"><label style="color:white;">Remember me.</label>
+                </div>
+                <br>
+                <button type="submit" id="submit-login">Login</button>
+                <br>
+                <a class="links" id="register-link" href="#">Don't have an account? Register.</a>
+            </form>
+            <form action="/admin/register-send" method="post" id="register-form">
+                <input name="username-register" class="input" type="text" required="true" id="username-r" placeholder="Username">
+                <br>
+                <input name="email-register" class="input" type="email" required="true" id="email" placeholder="E-mail">
+                <br>
+                <div class="password-container">
+                    <input class="input" type="password" required="true" id="password-r" placeholder="Password">
+                    <span id="togglePassword1">🔒</span>
+                </div>
+                <br>
+                <div class="password-container">
+                    <input name="password-register" class="input" type="password" required="true" id="password-r-confirm" placeholder="Confirm Password">
+                    <span id="togglePassword2">🔒</span>
+                </div>
+                <br>
+                <div id="check-password">Passwords not matching.</div>
+                <button type="submit" id="submit-register">Register</button>
+                <br>
+                <a class="links" id="login-link" href="#">Already have an account? Login.</a>
+            </form>
+            <div id="image-box">
+                <img id="f2" src="/images/f2.png">
+                <div id="frança-box">
+                    <label>Sponsored by:</label>
+                    <img id="frança" src="/images/frança.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

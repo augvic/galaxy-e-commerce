@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(32, 32, 32);
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(135, 199, 255, 0.336);
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.password-container {
+    position: relative;
+    height: 10%;
+    width: 100%;
+}
+
+#togglePassword {
+    position: absolute;
+    transform: translate(-120%, 40%);
+    cursor: pointer;
+}
+
+#togglePassword1 {
+    position: absolute;
+    transform: translate(-120%, 40%);
+    cursor: pointer;
+}
+
+#togglePassword2 {
+    position: absolute;
+    transform: translate(-120%, 40%);
+    cursor: pointer;
+}
+
+#username {
+    height: 10%;
+    width: 80%;
+}
+
+#password {
+    width: 80%;
+    height: 100%;
+}
+
+#submit-login {
+    width: 50%;
+    height: 10%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(36, 132, 221);
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+#submit-login:hover {
+    background-color:rgb(142, 200, 255);
+}
+
+#submit-register {
+    width: 50%;
+    height: 10%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(36, 132, 221);
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+#submit-register:hover {
+    background-color:rgb(142, 200, 255);
+}
+
+.input {
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+
+#all-forms {
+    display: flex;
+    height: 40%;
+    width: 50%;
+    background-color: transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+#image-box {
+    position: absolute;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: rgb(233, 250, 255);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#f2 {
+    height: 50%;
+}
+
+#frança-box {
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#frança {
+    height: 100%;
+}
+
+.move-left {
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.move-right {
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+}
+
+#register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(135, 199, 255, 0.336);
+    text-align: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+#username-r {
+    height: 10%;
+    width: 80%;
+}
+
+#password-r {
+    width: 80%;
+    height: 100%;
+}
+
+#password-r-confirm {
+    width: 80%;
+    height: 100%;
+}
+
+#email {
+    height: 10%;
+    width: 80%;
+}
+
+.links {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.links:hover {
+    color: rgb(0, 119, 255);
+}
+
+#check-password {
+    display: none;
+    margin-bottom: 4%;
+    color: rgb(243, 66, 104);
+}
+
+.account-create-sucess {
+    position: absolute;
+    z-index: 9999;
+    transform: translateY(-500%);
+    background-color: rgb(0, 161, 73);
+    color: aliceblue;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    margin-bottom: 5%;
+    border-radius: 20px;
+}
+
+.account-create-failed {
+    display: flex;
+    position: absolute;
+    z-index: 9999;
+    transform: translateY(-500%);
+    background-color: rgb(243, 66, 104);
+    color: aliceblue;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    margin-bottom: 5%;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 920px) {
+    #all-forms {
+        width: 80%;
+    }
+
+    #frança-box {
+        margin-left: 5%;
+        text-align: center;
+    }
+}
