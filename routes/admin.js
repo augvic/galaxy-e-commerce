@@ -37,7 +37,7 @@ router.post('/register-send', (req, res) => {
     const username = req.body["username-register"];
     const email = req.body["email-register"];
     const password = req.body["password-register"];
-    const sql = `INSERT INTO admin_accounts (username, email, password) VALUES (?, ?, ?)`;
+    const sql = `INSERT INTO admin-accounts (username, email, password) VALUES (?, ?, ?)`;
     connection.query(sql, [username, email, password], (error, results) => {
         if (error) {
             console.error('Error inserting data into database: ', error);
@@ -55,7 +55,7 @@ router.post('/login-send', (req, res) => {
     const username = req.body["username-login"];
     const password = req.body["password-login"];
     const rememberMe = req.body["remember-me"];
-    const sql = `SELECT * FROM admin_accounts WHERE username = ? AND password = ?`;
+    const sql = `SELECT * FROM admin-accounts WHERE username = ? AND password = ?`;
     connection.query(sql, [username, password], (error, results) => {
         if (error) {
             console.error('Error on login: ', error);

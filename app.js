@@ -18,7 +18,7 @@ const connection = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: process.env.SECRET_SQL,
-    database: "f2_commerce"
+    database: "galaxy-e-commerce"
 });
 connection.connect((err) => {
     if (err) {
