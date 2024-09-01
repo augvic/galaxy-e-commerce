@@ -1,0 +1,30 @@
+body {
+    background-color: aqua;
+}
+
+nav[name="nav"] {
+    background-color: blue;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+button[name="logout-button"] {
+    background-color: aqua;
+    height: 100%;
+    width: 30px;
+}
+
+.dropdown-menu {
+    background-color: blueviolet;
+}
+
+.user-options {
+    display: flex;
+    background-color: brown;
+    width: 100%;
+    justify-content: end;
+    height: 30px;
+    margin-right: 1%;
+}
